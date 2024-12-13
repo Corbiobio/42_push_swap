@@ -1,0 +1,7 @@
+checker_linux
+test.js
+*.o
+.vscode
+a.out
+push_swap
+libft.a
