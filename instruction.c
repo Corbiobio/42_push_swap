@@ -6,13 +6,13 @@
 /*   By: edarnand <edarnand@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/16 12:37:13 by edarnand          #+#    #+#             */
-/*   Updated: 2024/12/16 12:37:52 by edarnand         ###   ########.fr       */
+/*   Updated: 2024/12/16 13:01:36 by edarnand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	r(t_stack st)
+void	r(t_stack st, t_op **op)
 {
 	int	tmp;
 	int	i;
@@ -27,9 +27,10 @@ void	r(t_stack st)
 		i--;
 	}
 	st.arr[0] = tmp;
+	push_op(op, "r", st.id);
 }
 
-void	rr(t_stack st)
+void	rr(t_stack st, t_op **op)
 {
 	int	tmp;
 	int	i;
@@ -38,12 +39,13 @@ void	rr(t_stack st)
 		return ;
 	i = 0;
 	tmp = st.arr[0];
-	while (i < st.len - 2)
+	while (i < st.len - 1)
 	{
 		st.arr[i] = st.arr[i + 1];
 		i++;
 	}
 	st.arr[st.len - 1] = tmp;
+	push_op(op, "rr", st.id);
 }
 
 void	s(t_stack st, t_op **op)
