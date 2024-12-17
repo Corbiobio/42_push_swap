@@ -7,6 +7,9 @@ CFLAGS = -Wall -Werror -Wextra
 SRC_FILE =	main.c\
 			operation.c\
 			instruction.c\
+			stack.c\
+			average_sort.c\
+			search.c
 
 OBJ = ${SRC_FILE:.c=.o}
 
