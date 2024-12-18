@@ -6,12 +6,21 @@
 /*   By: edarnand <edarnand@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/13 15:24:00 by edarnand          #+#    #+#             */
-/*   Updated: 2024/12/13 16:21:38 by edarnand         ###   ########.fr       */
+/*   Updated: 2024/12/18 11:54:49 by edarnand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <unistd.h>
 
 int	error(void)
 {
 	write(1, "Error\n", 6);
 	return (-1);
+}
+
+int	ft_abs(int n)
+{
+	if (n < 0)
+		n *= -1;
+	return (n);
 }
