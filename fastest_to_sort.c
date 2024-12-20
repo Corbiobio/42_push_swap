@@ -6,7 +6,7 @@
 /*   By: edarnand <edarnand@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 11:06:45 by edarnand          #+#    #+#             */
-/*   Updated: 2024/12/18 12:37:12 by edarnand         ###   ########.fr       */
+/*   Updated: 2024/12/18 15:24:49 by edarnand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static int	index_from_top(t_stack st, int target)
 			return (i + 1);
 		i++;
 	}
-	return (-999);
+	return (-1);
 }
 
 static int	index_from_bot(t_stack st, int target)
