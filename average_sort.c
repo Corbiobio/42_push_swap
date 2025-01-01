@@ -6,7 +6,7 @@
 /*   By: edarnand <edarnand@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 10:15:15 by edarnand          #+#    #+#             */
-/*   Updated: 2024/12/20 17:57:31 by edarnand         ###   ########.fr       */
+/*   Updated: 2025/01/01 16:12:43 by edarnand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	sort_25_to_75_percent(t_stack *a, t_stack *b, t_op **op)
 	while (len > 0)
 	{
 		if ((a->arr[a->len - 1] >= mid && a->arr[a->len - 1] <= max)
-			|| (a->arr[a->len - 1] >= min && a->arr[a->len - 1] < mid) )
+			|| (a->arr[a->len - 1] >= min && a->arr[a->len - 1] < mid))
 		{
 			p(a, b, op);
 			if (b->arr[b->len - 1] >= min && b->arr[b->len - 1] < mid)
@@ -66,7 +66,6 @@ void	average_sort(t_stack *a, t_stack *b, t_op **op)
 {
 	sort_25_to_75_percent(a, b, op);
 	sort_0_to_100_percent(a, b, op);
-
 	if (a->arr[0] < a->arr[1])
 	{
 		a->min = a->arr[0];
