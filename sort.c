@@ -6,11 +6,12 @@
 /*   By: edarnand <edarnand@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/20 17:22:31 by edarnand          #+#    #+#             */
-/*   Updated: 2024/12/20 17:28:19 by edarnand         ###   ########.fr       */
+/*   Updated: 2025/01/01 16:24:27 by edarnand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+#include "libft.h"
 
 int	get_best_to_sort(t_stack *a, t_stack *b)
 {
