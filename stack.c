@@ -6,7 +6,7 @@
 /*   By: edarnand <edarnand@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 10:11:05 by edarnand          #+#    #+#             */
-/*   Updated: 2024/12/17 10:14:08 by edarnand         ###   ########.fr       */
+/*   Updated: 2025/01/01 18:28:24 by edarnand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ t_stack	init_stack(char id, int len, char **argv)
 			len--;
 		}
 	}
+	if (id == 'b')
+		st.len = 0;
 	return (st);
 }
 
