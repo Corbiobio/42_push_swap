@@ -6,7 +6,7 @@
 /*   By: edarnand <edarnand@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 15:48:41 by edarnand          #+#    #+#             */
-/*   Updated: 2024/12/20 18:36:38 by edarnand         ###   ########.fr       */
+/*   Updated: 2025/01/01 18:38:41 by edarnand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,8 +63,8 @@ void	sort_to_a(t_stack *a, t_stack *b, t_op **op, int num);
 void	sort(t_stack *a, t_stack *b, t_op **op);
 
 //utils
-int		error(void);
-int		ft_abs(int n);
+void	error(void);
+void	error_exit(void);
 void	n_move_dir(t_stack st, int n, int dir, t_op **op);
 void	free_all(t_stack *a, t_stack *b, t_op *op);
 
