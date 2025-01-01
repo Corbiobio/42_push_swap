@@ -6,27 +6,25 @@
 /*   By: edarnand <edarnand@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/13 15:24:00 by edarnand          #+#    #+#             */
-/*   Updated: 2024/12/20 18:37:00 by edarnand         ###   ########.fr       */
+/*   Updated: 2025/01/01 18:38:26 by edarnand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdlib.h>
 #include "push_swap.h"
+#include "libft.h"
 
-int	error(void)
+void	error(void)
 {
 	write(1, "Error\n", 6);
-	return (-1);
 }
 
-int	ft_abs(int n)
+void	error_exit(void)
 {
-	if (n < 0)
-		n *= -1;
-	return (n);
+	write(1, "Error\n", 6);
+	exit(EXIT_FAILURE);
 }
-
 void	n_move_dir(t_stack st, int n, int dir, t_op **op)
 {
 	int	i;
