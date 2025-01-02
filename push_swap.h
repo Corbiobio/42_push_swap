@@ -6,7 +6,7 @@
 /*   By: edarnand <edarnand@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 15:48:41 by edarnand          #+#    #+#             */
-/*   Updated: 2025/01/01 18:38:41 by edarnand         ###   ########.fr       */
+/*   Updated: 2025/01/02 18:40:48 by edarnand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,7 @@ void	sort(t_stack *a, t_stack *b, t_op **op);
 void	error(void);
 void	error_exit(void);
 void	n_move_dir(t_stack st, int n, int dir, t_op **op);
+void	free_argv(char **argv);
 void	free_all(t_stack *a, t_stack *b, t_op *op);
 
 #endif
