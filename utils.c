@@ -6,14 +6,13 @@
 /*   By: edarnand <edarnand@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/13 15:24:00 by edarnand          #+#    #+#             */
-/*   Updated: 2025/01/02 18:40:31 by edarnand         ###   ########.fr       */
+/*   Updated: 2025/01/05 18:13:04 by edarnand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdlib.h>
 #include "push_swap.h"
-#include "libft.h"
+#include <stdlib.h>
+#include <unistd.h>
 
 void	error(void)
 {
