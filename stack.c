@@ -6,7 +6,7 @@
 /*   By: edarnand <edarnand@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 10:11:05 by edarnand          #+#    #+#             */
-/*   Updated: 2025/01/01 18:28:24 by edarnand         ###   ########.fr       */
+/*   Updated: 2025/01/05 15:46:13 by edarnand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,21 @@
 #include "libft.h"
 #include <stdio.h>
 
-t_stack	init_stack(char id, int len, char **argv)
+t_stack	init_stack(char id, int len, int *arr)
 {
 	t_stack	st;
-	int		i;
 
 	st.id = id;
-	st.len = len;
-	st.arr = malloc(sizeof(int) * (len));
-	if (id == 'a' && st.arr != NULL)
+	if (id == 'a')
 	{
-		i = 0;
-		while (len > 0)
-		{
-			st.arr[i] = ft_atoi(argv[len]);
-			i++;
-			len--;
-		}
+		st.len = len;	
+		st.arr = arr;
 	}
 	if (id == 'b')
+	{
+		st.arr = malloc(sizeof(int) * (len));
 		st.len = 0;
+	}
 	return (st);
 }
 
