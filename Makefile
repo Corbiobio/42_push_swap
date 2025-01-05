@@ -12,7 +12,8 @@ SRC_FILE =	main.c\
 			average_sort.c\
 			fastest_to_top.c\
 			fastest_to_sort.c\
-			sort.c
+			sort.c\
+			parse_arg_to_arr.c
 
 OBJ = ${SRC_FILE:.c=.o}
 
@@ -21,7 +22,7 @@ LIB_DIR = libft/
 
 INC = -I . -I ${LIB_DIR}
 
-ARR = 8 9 10 7 6 4 5 3 1 2 0
+ARR = "10 5 8 7 4 3 1 9 2 6"
 
 %.o: %.c 
 	${CC} ${CFLAGS} ${INC} -c $< -o $@

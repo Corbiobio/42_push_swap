@@ -6,7 +6,7 @@
 /*   By: edarnand <edarnand@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 15:48:41 by edarnand          #+#    #+#             */
-/*   Updated: 2025/01/02 18:40:48 by edarnand         ###   ########.fr       */
+/*   Updated: 2025/01/05 15:51:43 by edarnand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ void	s(t_stack st, t_op **op);
 void	p(t_stack *from, t_stack *to, t_op **op);
 
 //stack
-t_stack	init_stack(char id, int len, char **argv);
+t_stack	init_stack(char id, int len, int *arr);
 void	print_stack(t_stack st);
 
 //sort
@@ -61,6 +61,9 @@ int		fastest_to_sort(t_stack st, int target);
 int		get_best_to_sort(t_stack *a, t_stack *b);
 void	sort_to_a(t_stack *a, t_stack *b, t_op **op, int num);
 void	sort(t_stack *a, t_stack *b, t_op **op);
+
+//parse_params
+char	**parse_arg(int *argc, char **argv, int *to_free);
 
 //utils
 void	error(void);
