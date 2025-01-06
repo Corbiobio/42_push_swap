@@ -6,7 +6,7 @@
 /*   By: edarnand <edarnand@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/16 12:34:48 by edarnand          #+#    #+#             */
-/*   Updated: 2024/12/20 18:42:39 by edarnand         ###   ########.fr       */
+/*   Updated: 2025/01/06 11:58:43 by edarnand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,22 +78,3 @@ void	print_op(t_op *start)
 	}
 }
 
-//TO REMOVE
-void	print_count_op(t_op *start)
-{
-	int	i;
-
-	i = 0;
-	if (start->val == NULL)
-		start = start->next;
-	while (start != NULL)
-	{
-		printf("%s%c ", start->val, start->id);
-		if (start->count > 1)
-			start->count--;
-		else
-			start = start->next;
-		i++;
-	}
-	printf("count %d", i);
-}
