@@ -13,7 +13,8 @@ SRC_FILE =	main.c\
 			fastest_to_top.c\
 			fastest_to_sort.c\
 			sort.c\
-			parse_arg_to_arr.c
+			arg_parsing.c\
+			arg_to_indexed_arr.c
 
 OBJ = ${SRC_FILE:.c=.o}
 

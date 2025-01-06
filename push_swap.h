@@ -6,7 +6,7 @@
 /*   By: edarnand <edarnand@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 15:48:41 by edarnand          #+#    #+#             */
-/*   Updated: 2025/01/05 15:51:43 by edarnand         ###   ########.fr       */
+/*   Updated: 2025/01/06 11:58:36 by edarnand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ typedef struct s_op
 void	push_op(t_op **op, char *val, char id);
 void	free_op(t_op *start);
 void	print_op(t_op *start);
-void	print_count_op(t_op *start); //TO REMOVEEEEEEEEEEEEEEEE
 
 //instruction
 void	r(t_stack st, t_op **op);
@@ -62,8 +61,11 @@ int		get_best_to_sort(t_stack *a, t_stack *b);
 void	sort_to_a(t_stack *a, t_stack *b, t_op **op, int num);
 void	sort(t_stack *a, t_stack *b, t_op **op);
 
-//parse_params
+//arg_parsing
 char	**parse_arg(int *argc, char **argv, int *to_free);
+
+//arg_to_indexed_arr
+int		*arg_to_indexed_arr(int *argc, char **argv);
 
 //utils
 void	error(void);
