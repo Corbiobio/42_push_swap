@@ -6,12 +6,12 @@
 /*   By: edarnand <edarnand@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 10:11:05 by edarnand          #+#    #+#             */
-/*   Updated: 2025/01/05 15:46:13 by edarnand         ###   ########.fr       */
+/*   Updated: 2025/01/06 16:58:43 by edarnand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
 #include "libft.h"
+#include "push_swap.h"
 #include <stdio.h>
 
 t_stack	init_stack(char id, int len, int *arr)
@@ -21,7 +21,7 @@ t_stack	init_stack(char id, int len, int *arr)
 	st.id = id;
 	if (id == 'a')
 	{
-		st.len = len;	
+		st.len = len;
 		st.arr = arr;
 	}
 	if (id == 'b')
