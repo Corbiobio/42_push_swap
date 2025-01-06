@@ -6,7 +6,7 @@
 /*   By: edarnand <edarnand@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/06 11:51:45 by edarnand          #+#    #+#             */
-/*   Updated: 2025/01/06 11:55:46 by edarnand         ###   ########.fr       */
+/*   Updated: 2025/01/06 16:56:10 by edarnand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ static int	*arg_to_arr(int argc, char **argv, int to_free)
 	return (arr);
 }
 
-static void	replace_one_by_index_sorted(int *arr, int *arr_index, int len, int n)
+static void	replace_by_index_sorted(int *arr, int *arr_index, int len, int n)
 {
 	int	smallest_index;
 	int	smallest;
@@ -75,7 +75,7 @@ static int	*replace_all_by_index_sorted(int *arr, int *arr_index, int len)
 	i = 0;
 	while (i < len)
 	{
-		replace_one_by_index_sorted(arr, arr_index, len, i + 1);
+		replace_by_index_sorted(arr, arr_index, len, i + 1);
 		i++;
 	}
 	return (arr_index);
