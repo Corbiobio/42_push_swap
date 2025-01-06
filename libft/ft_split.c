@@ -6,7 +6,7 @@
 /*   By: edarnand <edarnand@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 09:33:22 by edarnand          #+#    #+#             */
-/*   Updated: 2024/11/12 17:58:36 by edarnand         ###   ########.fr       */
+/*   Updated: 2025/01/06 10:54:20 by edarnand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ static char	**add_words(char **dst, const char *s, char c, int total)
 	return (dst);
 }
 
-static char	get_total_words(const char *s, char c)
+static int	get_total_words(const char *s, char c)
 {
 	int	count_words;
 	int	len_word;
