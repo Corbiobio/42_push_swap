@@ -6,7 +6,7 @@
 /*   By: edarnand <edarnand@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 15:48:41 by edarnand          #+#    #+#             */
-/*   Updated: 2025/01/06 11:58:36 by edarnand         ###   ########.fr       */
+/*   Updated: 2025/01/06 13:06:06 by edarnand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,20 +45,16 @@ void	p(t_stack *from, t_stack *to, t_op **op);
 t_stack	init_stack(char id, int len, int *arr);
 void	print_stack(t_stack st);
 
-//sort
-void	average_sort(t_stack *a, t_stack *b, t_op **op);
-void	sort_25_to_75_percent(t_stack *a, t_stack *b, t_op **op);
-void	sort_0_to_100_percent(t_stack *a, t_stack *b, t_op **op);
-
 //fastest_to_op
 int		fastest_to_top(t_stack st, int target);
 
 //fastest_to_sort
 int		fastest_to_sort(t_stack st, int target);
 
+//average_sort
+void	average_sort(t_stack *a, t_stack *b, t_op **op);
+
 //sort
-int		get_best_to_sort(t_stack *a, t_stack *b);
-void	sort_to_a(t_stack *a, t_stack *b, t_op **op, int num);
 void	sort(t_stack *a, t_stack *b, t_op **op);
 
 //arg_parsing
@@ -70,7 +66,6 @@ int		*arg_to_indexed_arr(int *argc, char **argv);
 //utils
 void	error(void);
 void	error_exit(void);
-void	n_move_dir(t_stack st, int n, int dir, t_op **op);
 void	free_argv(char **argv);
 void	free_all(t_stack *a, t_stack *b, t_op *op);
 

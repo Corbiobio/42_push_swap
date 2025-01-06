@@ -6,7 +6,7 @@
 /*   By: edarnand <edarnand@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/13 15:24:00 by edarnand          #+#    #+#             */
-/*   Updated: 2025/01/05 18:13:04 by edarnand         ###   ########.fr       */
+/*   Updated: 2025/01/06 12:43:27 by edarnand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,20 +23,6 @@ void	error_exit(void)
 {
 	write(1, "Error\n", 6);
 	exit(EXIT_FAILURE);
-}
-void	n_move_dir(t_stack st, int n, int dir, t_op **op)
-{
-	int	i;
-
-	i = 0;
-	while (i < n)
-	{
-		if (dir > 0)
-			r(st, op);
-		else
-			rr(st, op);
-		i++;
-	}
 }
 
 void	free_argv(char **argv)

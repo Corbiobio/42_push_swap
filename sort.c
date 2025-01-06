@@ -6,14 +6,29 @@
 /*   By: edarnand <edarnand@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/20 17:22:31 by edarnand          #+#    #+#             */
-/*   Updated: 2025/01/01 16:24:27 by edarnand         ###   ########.fr       */
+/*   Updated: 2025/01/06 13:05:36 by edarnand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 #include "libft.h"
 
-int	get_best_to_sort(t_stack *a, t_stack *b)
+static void	n_move_dir(t_stack st, int n, int dir, t_op **op)
+{
+	int	i;
+
+	i = 0;
+	while (i < n)
+	{
+		if (dir > 0)
+			r(st, op);
+		else
+			rr(st, op);
+		i++;
+	}
+}
+
+static int	get_best_to_sort(t_stack *a, t_stack *b)
 {
 	int	i;
 	int	lowest_num;
@@ -39,7 +54,7 @@ int	get_best_to_sort(t_stack *a, t_stack *b)
 	return (lowest_num);
 }
 
-void	sort_to_a(t_stack *a, t_stack *b, t_op **op, int num)
+static void	sort_to_a(t_stack *a, t_stack *b, t_op **op, int num)
 {
 	int	move_top;
 	int	move_sort;

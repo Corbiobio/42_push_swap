@@ -6,14 +6,14 @@
 /*   By: edarnand <edarnand@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 10:15:15 by edarnand          #+#    #+#             */
-/*   Updated: 2025/01/01 16:12:43 by edarnand         ###   ########.fr       */
+/*   Updated: 2025/01/06 13:04:54 by edarnand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 #include <stdio.h>
 
-void	sort_25_to_75_percent(t_stack *a, t_stack *b, t_op **op)
+static void	sort_25_to_75_percent(t_stack *a, t_stack *b, t_op **op)
 {
 	int	len;
 	int	max;
@@ -39,7 +39,7 @@ void	sort_25_to_75_percent(t_stack *a, t_stack *b, t_op **op)
 	}
 }
 
-void	sort_0_to_100_percent(t_stack *a, t_stack *b, t_op **op)
+static void	sort_0_to_100_percent(t_stack *a, t_stack *b, t_op **op)
 {
 	int	max;
 	int	min;
