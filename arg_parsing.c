@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   parse_arg_to_arr.c                                 :+:      :+:    :+:   */
+/*   arg_parsing.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: edarnand <edarnand@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/02 19:08:06 by edarnand          #+#    #+#             */
-/*   Updated: 2025/01/06 11:40:59 by edarnand         ###   ########.fr       */
+/*   Updated: 2025/01/06 12:27:13 by edarnand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,16 +21,13 @@ static int	is_valid_str(char *str)
 	{
 		if (ft_isdigit(*str) == 1)
 			return (1);
-		else
-			return (0);
+		return (0);
 	}
-	while (*str != '\0' && *(str + 1) != '\0')
+	if (*str == '-' || *str == '+')
+		str++;
+	while (*str != '\0')
 	{
-		if (*str != '-' && *str != '+' && ft_isdigit(*str) == 0)
-			return (0);
-		else if ((*str == '-' || *str == '+') && ft_isdigit(*(str + 1)) == 0)
-			return (0);
-		else if (ft_isdigit(*str) == 1 && ft_isdigit(*(str + 1)) == 0)
+		if (ft_isdigit(*str) == 0)
 			return (0);
 		str++;
 	}
