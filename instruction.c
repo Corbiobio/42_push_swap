@@ -6,7 +6,7 @@
 /*   By: edarnand <edarnand@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/16 12:37:13 by edarnand          #+#    #+#             */
-/*   Updated: 2024/12/16 13:01:36 by edarnand         ###   ########.fr       */
+/*   Updated: 2025/01/06 16:57:15 by edarnand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,6 @@ void	s(t_stack st, t_op **op)
 
 void	p(t_stack *from, t_stack *to, t_op **op)
 {
-
 	if (from->len == 0)
 		return ;
 	to->arr[to->len] = from->arr[from->len - 1];
