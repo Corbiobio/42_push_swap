@@ -6,7 +6,7 @@
 /*   By: edarnand <edarnand@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/16 12:34:48 by edarnand          #+#    #+#             */
-/*   Updated: 2025/01/06 11:58:43 by edarnand         ###   ########.fr       */
+/*   Updated: 2025/01/06 13:21:45 by edarnand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	push_op(t_op **op, char *val, char id)
 {
 	t_op	*new;
 
+	if ((*op)->val == NULL)
+		return ;
 	if (*op != NULL && (*op)->val == val && (*op)->id == id)
 	{
 		(*op)->count += 1;
@@ -27,10 +29,7 @@ void	push_op(t_op **op, char *val, char id)
 	if (new == NULL)
 	{
 		if (*op != NULL)
-		{
-			(*op)->count = -1;
 			(*op)->val = NULL;
-		}
 		return ;
 	}
 	new->next = NULL;
@@ -61,7 +60,7 @@ void	print_op(t_op *start)
 	copy = start;
 	while (copy != NULL)
 	{
-		if (copy->count == -1)
+		if (copy->val == NULL)
 		{
 			error();
 			return ;
