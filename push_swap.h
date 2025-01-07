@@ -6,7 +6,7 @@
 /*   By: edarnand <edarnand@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 15:48:41 by edarnand          #+#    #+#             */
-/*   Updated: 2025/01/06 13:06:06 by edarnand         ###   ########.fr       */
+/*   Updated: 2025/01/07 11:49:41 by edarnand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ typedef struct s_op
 void	push_op(t_op **op, char *val, char id);
 void	free_op(t_op *start);
 void	print_op(t_op *start);
+void	merge_all_op(t_op *start);
 
 //instruction
 void	r(t_stack st, t_op **op);
