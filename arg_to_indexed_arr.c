@@ -6,12 +6,30 @@
 /*   By: edarnand <edarnand@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/06 11:51:45 by edarnand          #+#    #+#             */
-/*   Updated: 2025/01/06 16:56:10 by edarnand         ###   ########.fr       */
+/*   Updated: 2025/01/07 11:37:23 by edarnand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include "push_swap.h"
+
+int	atoi_protected(char *str, char **argv, int to_free, int *arr)
+{
+	int	result;
+	int	is_negative;
+
+	is_negative = 0;
+	if (str != NULL && str[0] == '-')
+		is_negative = 1;
+	result = ft_atoi(str);
+	if ((is_negative == 1 && result < 0) || (is_negative == 0 && result >= 0))
+		return (result);
+	if (to_free == 1)
+		free_argv(argv);
+	free(arr);
+	error_exit();
+	return (0);
+}
 
 static int	*arg_to_arr(int argc, char **argv, int to_free)
 {
@@ -23,7 +41,7 @@ static int	*arg_to_arr(int argc, char **argv, int to_free)
 	i = argc - 1;
 	while (i >= 0 && arr != NULL)
 	{
-		arr[i] = ft_atoi(argv[argc - (i + 1)]);
+		arr[i] = atoi_protected(argv[argc - (i + 1)], argv, to_free, arr);
 		j = i + 1;
 		while (j < argc)
 		{
