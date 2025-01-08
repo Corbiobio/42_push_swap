@@ -6,7 +6,7 @@
 /*   By: edarnand <edarnand@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/20 17:22:31 by edarnand          #+#    #+#             */
-/*   Updated: 2025/01/06 16:57:48 by edarnand         ###   ########.fr       */
+/*   Updated: 2025/01/07 12:37:06 by edarnand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ static void	sort_to_a(t_stack *a, t_stack *b, t_op **op, int num)
 	p(b, a, op);
 }
 
-void	sort(t_stack *a, t_stack *b, t_op **op)
+void	sort(t_stack *a, t_stack *b, t_op **op, t_op *op_start)
 {
 	int	i;
 	int	best;
@@ -81,4 +81,9 @@ void	sort(t_stack *a, t_stack *b, t_op **op)
 	}
 	data = fastest_to_top(*a, a->min);
 	n_move_dir(*a, ft_abs(data), data, op);
+	if ((*op)->val == NULL)
+	{
+		free_all(a, b, op_start);
+		error_exit();
+	}
 }

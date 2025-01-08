@@ -6,7 +6,7 @@
 /*   By: edarnand <edarnand@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/16 12:34:48 by edarnand          #+#    #+#             */
-/*   Updated: 2025/01/07 11:50:33 by edarnand         ###   ########.fr       */
+/*   Updated: 2025/01/07 12:33:39 by edarnand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,18 +56,6 @@ void	free_op(t_op *start)
 
 void	print_op(t_op *start)
 {
-	t_op	*copy;
-
-	copy = start;
-	while (copy != NULL)
-	{
-		if (copy->val == NULL)
-		{
-			error();
-			return ;
-		}
-		copy = copy->next;
-	}
 	while (start != NULL)
 	{
 		if (start->count >= 1)

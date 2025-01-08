@@ -6,7 +6,7 @@
 /*   By: edarnand <edarnand@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 11:40:02 by edarnand          #+#    #+#             */
-/*   Updated: 2025/01/07 11:49:07 by edarnand         ###   ########.fr       */
+/*   Updated: 2025/01/08 10:13:11 by edarnand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,8 @@ void	push_swap(int len, int *arr)
 	op_start = op;
 	if (a.arr != NULL && b.arr != NULL && op != NULL)
 	{
-		sort(&a, &b, &op);
-		if (op->val == NULL)
+		sort(&a, &b, &op, op_start);
+		if (b.len >= 1 || is_sorted_descending(a.arr, a.len) == 0)
 		{
 			free_all(&a, &b, op_start);
 			error_exit();
@@ -55,6 +55,9 @@ int	main(int argc, char **argv)
 		argc -= 1;
 		argv += 1;
 		arr = arg_to_indexed_arr(&argc, argv);
+		// THE NORM
+		// IF ALLREADY SORT free and return
+		// SORTING FOR 10 NUM
 		push_swap(argc, arr);
 	}
 	return (0);

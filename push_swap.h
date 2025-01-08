@@ -6,7 +6,7 @@
 /*   By: edarnand <edarnand@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 15:48:41 by edarnand          #+#    #+#             */
-/*   Updated: 2025/01/07 11:49:41 by edarnand         ###   ########.fr       */
+/*   Updated: 2025/01/07 13:06:49 by edarnand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ int		fastest_to_sort(t_stack st, int target);
 void	average_sort(t_stack *a, t_stack *b, t_op **op);
 
 //sort
-void	sort(t_stack *a, t_stack *b, t_op **op);
+void	sort(t_stack *a, t_stack *b, t_op **op, t_op *op_start);
 
 //arg_parsing
 char	**parse_arg(int *argc, char **argv, int *to_free);
@@ -65,9 +65,9 @@ char	**parse_arg(int *argc, char **argv, int *to_free);
 int		*arg_to_indexed_arr(int *argc, char **argv);
 
 //utils
-void	error(void);
 void	error_exit(void);
 void	free_argv(char **argv);
 void	free_all(t_stack *a, t_stack *b, t_op *op);
+int		is_sorted_descending(int *arr, int len);
 
 #endif
