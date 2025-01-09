@@ -1,4 +1,4 @@
-checker_linux
+checker*
 test.js
 *.o
 .vscode
