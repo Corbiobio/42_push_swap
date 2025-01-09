@@ -47,7 +47,9 @@ C_FILE = ft_strlen.c\
 		ft_lstclear.c\
 		ft_lstiter.c\
 		ft_lstmap.c\
-		ft_abs.c
+		ft_abs.c\
+		ft_strndup.c\
+		get_next_line.c
 
 OBJ = ${C_FILE:.c=.o}
 
