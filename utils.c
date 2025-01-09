@@ -6,7 +6,7 @@
 /*   By: edarnand <edarnand@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/13 15:24:00 by edarnand          #+#    #+#             */
-/*   Updated: 2025/01/07 13:08:21 by edarnand         ###   ########.fr       */
+/*   Updated: 2025/01/08 11:43:20 by edarnand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 void	error_exit(void)
 {
-	write(2, "Error\n", 6);
+	write(STDERR_FILENO, "Error\n", 6);
 	exit(EXIT_FAILURE);
 }
 
