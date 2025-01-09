@@ -6,7 +6,7 @@
 /*   By: edarnand <edarnand@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 15:48:41 by edarnand          #+#    #+#             */
-/*   Updated: 2025/01/07 13:06:49 by edarnand         ###   ########.fr       */
+/*   Updated: 2025/01/09 17:50:50 by edarnand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,10 @@ void	average_sort(t_stack *a, t_stack *b, t_op **op);
 
 //sort
 void	sort(t_stack *a, t_stack *b, t_op **op, t_op *op_start);
+
+//sort small stack
+void	sort_stack_6(t_stack *a, t_stack *b, t_op **op);
+void	sort_stack_3(t_stack *a, t_op **op);
 
 //arg_parsing
 char	**parse_arg(int *argc, char **argv, int *to_free);

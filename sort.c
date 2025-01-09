@@ -6,7 +6,7 @@
 /*   By: edarnand <edarnand@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/20 17:22:31 by edarnand          #+#    #+#             */
-/*   Updated: 2025/01/07 12:37:06 by edarnand         ###   ########.fr       */
+/*   Updated: 2025/01/09 17:49:27 by edarnand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,11 @@ void	sort(t_stack *a, t_stack *b, t_op **op, t_op *op_start)
 	int	best;
 	int	data;
 
+	if (a->len <= 6)
+	{
+		sort_stack_6(a, b, op);
+		return ;
+	}
 	average_sort(a, b, op);
 	i = 0;
 	while (b->len > 0 && i >= 0)
