@@ -6,7 +6,7 @@
 /*   By: edarnand <edarnand@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 11:40:02 by edarnand          #+#    #+#             */
-/*   Updated: 2025/01/08 10:13:11 by edarnand         ###   ########.fr       */
+/*   Updated: 2025/01/09 16:38:36 by edarnand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #include "push_swap.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
 
 void	push_swap(int len, int *arr)
 {
@@ -22,6 +23,8 @@ void	push_swap(int len, int *arr)
 	t_op	*op_start;
 	t_op	*op;
 
+	if (is_sorted_descending(arr, len))
+		return ;
 	a = init_stack('a', len, arr);
 	b = init_stack('b', len, NULL);
 	op = NULL;
@@ -30,11 +33,6 @@ void	push_swap(int len, int *arr)
 	if (a.arr != NULL && b.arr != NULL && op != NULL)
 	{
 		sort(&a, &b, &op, op_start);
-		if (b.len >= 1 || is_sorted_descending(a.arr, a.len) == 0)
-		{
-			free_all(&a, &b, op_start);
-			error_exit();
-		}
 		merge_all_op(op_start->next);
 		print_op(op_start->next);
 		free_all(&a, &b, op_start);
@@ -49,7 +47,7 @@ int	main(int argc, char **argv)
 	int	*arr;
 
 	if (argc == 1)
-		ft_putstr_fd(argv[0], 1);
+		ft_putstr_fd(argv[0], STDOUT_FILENO);
 	else if (argc >= 2)
 	{
 		argc -= 1;
