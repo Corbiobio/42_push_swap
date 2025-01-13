@@ -1,4 +1,6 @@
-checker*
+checker_linux
+checker_Mac
+checker
 test.js
 *.o
 .vscode
