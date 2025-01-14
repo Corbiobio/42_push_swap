@@ -6,7 +6,7 @@
 /*   By: edarnand <edarnand@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/16 12:34:48 by edarnand          #+#    #+#             */
-/*   Updated: 2025/01/07 12:33:39 by edarnand         ###   ########.fr       */
+/*   Updated: 2025/01/14 13:28:02 by edarnand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,6 @@ void	print_op(t_op *start)
 			start = start->next;
 	}
 }
-
 
 static void	merge_curr_op(t_op *op, char *new_val)
 {

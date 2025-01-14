@@ -6,7 +6,7 @@
 /*   By: edarnand <edarnand@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 10:18:07 by edarnand          #+#    #+#             */
-/*   Updated: 2025/01/14 13:12:45 by edarnand         ###   ########.fr       */
+/*   Updated: 2025/01/14 13:28:44 by edarnand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,6 @@ static void	do_in(char in[], t_stack *a, t_stack *b)
 	}
 }
 
-#include <stdio.h>
 static void	read_in(char in[])
 {
 	int	byte;
@@ -75,7 +74,6 @@ static void	read_in(char in[])
 		if (in[byte - 1] == '\n')
 			in[byte - 1] = '\0';
 	}
-		
 }
 
 void	checker(t_stack a, t_stack b)

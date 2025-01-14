@@ -6,7 +6,7 @@
 /*   By: edarnand <edarnand@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/06 11:51:45 by edarnand          #+#    #+#             */
-/*   Updated: 2025/01/07 11:37:23 by edarnand         ###   ########.fr       */
+/*   Updated: 2025/01/14 13:24:24 by edarnand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -115,9 +115,9 @@ int	*arg_to_indexed_arr(int *argc, char **argv)
 		arr_index = replace_all_by_index_sorted(arr, arr_index, *argc);
 	else
 	{
-		if (arr_index == NULL)
+		if (arr_index != NULL)
 			free(arr_index);
-		if (arr == NULL)
+		if (arr != NULL)
 			free(arr);
 		error_exit();
 	}
