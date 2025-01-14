@@ -5,7 +5,7 @@ NAME_BONUS = checker
 CC = cc
 CFLAGS = -Wall -Werror -Wextra
 
-SRC_FILE =	main.c\
+SRC_FILE =	push_swap.c\
 			utils.c\
 			operation.c\
 			instruction.c\
