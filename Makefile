@@ -10,7 +10,7 @@ SRC_FILE =	main.c\
 			operation.c\
 			instruction.c\
 			stack.c\
-			average_sort.c\
+			sort_quarter.c\
 			fastest_to_top.c\
 			fastest_to_sort.c\
 			sort.c\

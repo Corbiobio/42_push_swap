@@ -6,7 +6,7 @@
 /*   By: edarnand <edarnand@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 10:15:15 by edarnand          #+#    #+#             */
-/*   Updated: 2025/01/09 17:42:44 by edarnand         ###   ########.fr       */
+/*   Updated: 2025/01/14 13:15:39 by edarnand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ static void	sort_0_to_100_percent(t_stack *a, t_stack *b, t_op **op)
 	}
 }
 
-void	average_sort(t_stack *a, t_stack *b, t_op **op)
+void	sort_quarter(t_stack *a, t_stack *b, t_op **op)
 {
 	a->min = a->len / 4;
 	a->max = a->min * 3;

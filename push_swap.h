@@ -6,7 +6,7 @@
 /*   By: edarnand <edarnand@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 15:48:41 by edarnand          #+#    #+#             */
-/*   Updated: 2025/01/09 18:36:00 by edarnand         ###   ########.fr       */
+/*   Updated: 2025/01/14 13:15:38 by edarnand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,8 +58,8 @@ int		fastest_to_top(t_stack st, int target);
 //fastest_to_sort
 int		fastest_to_sort(t_stack st, int target);
 
-//average_sort
-void	average_sort(t_stack *a, t_stack *b, t_op **op);
+//sort_quarter
+void	sort_quarter(t_stack *a, t_stack *b, t_op **op);
 
 //sort
 void	sort(t_stack *a, t_stack *b, t_op **op, t_op *op_start);
