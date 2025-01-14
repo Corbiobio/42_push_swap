@@ -6,7 +6,7 @@
 /*   By: edarnand <edarnand@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 10:18:07 by edarnand          #+#    #+#             */
-/*   Updated: 2025/01/14 13:28:44 by edarnand         ###   ########.fr       */
+/*   Updated: 2025/01/14 14:46:01 by edarnand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,9 +90,9 @@ void	checker(t_stack a, t_stack b)
 			do_in(in, &a, &b);
 	}
 	if (b.len >= 1 || is_sorted_descending(a.arr, a.len) == 0)
-		write(STDOUT_FILENO, "KO\n", 3);
+		ft_putstr_fd("KO\n", STDOUT_FILENO);
 	else
-		write(STDOUT_FILENO, "OK\n", 3);
+		ft_putstr_fd("OK\n", STDOUT_FILENO);
 	free_all(&a, &b, NULL);
 }
 

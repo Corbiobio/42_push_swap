@@ -6,12 +6,11 @@
 /*   By: edarnand <edarnand@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 11:06:45 by edarnand          #+#    #+#             */
-/*   Updated: 2024/12/18 15:24:49 by edarnand         ###   ########.fr       */
+/*   Updated: 2025/01/14 18:17:28 by edarnand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include <stdio.h>
 
 static int	index_from_top(t_stack st, int target)
 {

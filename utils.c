@@ -6,17 +6,18 @@
 /*   By: edarnand <edarnand@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/13 15:24:00 by edarnand          #+#    #+#             */
-/*   Updated: 2025/01/08 11:43:20 by edarnand         ###   ########.fr       */
+/*   Updated: 2025/01/14 18:16:39 by edarnand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include "push_swap.h"
 #include <stdlib.h>
 #include <unistd.h>
 
 void	error_exit(void)
 {
-	write(STDERR_FILENO, "Error\n", 6);
+	ft_putstr_fd("Error\n", STDERR_FILENO);
 	exit(EXIT_FAILURE);
 }
 

@@ -6,14 +6,12 @@
 /*   By: edarnand <edarnand@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/16 12:34:48 by edarnand          #+#    #+#             */
-/*   Updated: 2025/01/14 13:43:12 by edarnand         ###   ########.fr       */
+/*   Updated: 2025/01/14 18:14:41 by edarnand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include "push_swap.h"
-#include <stdio.h>
-#include <stdlib.h>
 #include <unistd.h>
 
 void	push_op(t_op **op, char *val, char id)

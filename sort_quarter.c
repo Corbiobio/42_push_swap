@@ -1,17 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   average_sort.c                                     :+:      :+:    :+:   */
+/*   sort_quarter.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: edarnand <edarnand@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 10:15:15 by edarnand          #+#    #+#             */
-/*   Updated: 2025/01/14 13:15:39 by edarnand         ###   ########.fr       */
+/*   Updated: 2025/01/14 18:15:34 by edarnand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include <stdio.h>
 
 static void	sort_25_to_75_percent(t_stack *a, t_stack *b, t_op **op)
 {
