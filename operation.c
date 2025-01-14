@@ -6,7 +6,7 @@
 /*   By: edarnand <edarnand@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/16 12:34:48 by edarnand          #+#    #+#             */
-/*   Updated: 2025/01/14 13:28:02 by edarnand         ###   ########.fr       */
+/*   Updated: 2025/01/14 13:43:12 by edarnand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #include "push_swap.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
 
 void	push_op(t_op **op, char *val, char id)
 {
@@ -60,10 +61,10 @@ void	print_op(t_op *start)
 	{
 		if (start->count >= 1)
 		{
-			if (start->id == 0)
-				printf("%s\n", start->val);
-			else
-				printf("%s%c\n", start->val, start->id);
+			ft_putstr_fd(start->val, STDOUT_FILENO);
+			if (start->id != 0)
+				ft_putchar_fd(start->id, STDOUT_FILENO);
+			ft_putchar_fd('\n', STDOUT_FILENO);
 			start->count--;
 		}
 		else
