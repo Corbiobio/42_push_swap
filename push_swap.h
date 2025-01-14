@@ -6,7 +6,7 @@
 /*   By: edarnand <edarnand@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 15:48:41 by edarnand          #+#    #+#             */
-/*   Updated: 2025/01/09 17:50:50 by edarnand         ###   ########.fr       */
+/*   Updated: 2025/01/09 18:36:00 by edarnand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,12 @@ void	rr(t_stack st, t_op **op);
 void	s(t_stack st, t_op **op);
 void	p(t_stack *from, t_stack *to, t_op **op);
 
+//instruction_fake_bonus
+void	r_fake(t_stack st);
+void	rr_fake(t_stack st);
+void	s_fake(t_stack st);
+void	p_fake(t_stack *from, t_stack *to);
+
 //stack
 t_stack	init_stack(char id, int len, int *arr);
 void	print_stack(t_stack st);
@@ -58,7 +64,7 @@ void	average_sort(t_stack *a, t_stack *b, t_op **op);
 //sort
 void	sort(t_stack *a, t_stack *b, t_op **op, t_op *op_start);
 
-//sort small stack
+//sort_small_stack
 void	sort_stack_6(t_stack *a, t_stack *b, t_op **op);
 void	sort_stack_3(t_stack *a, t_op **op);
 
