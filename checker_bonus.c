@@ -6,7 +6,7 @@
 /*   By: edarnand <edarnand@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 10:18:07 by edarnand          #+#    #+#             */
-/*   Updated: 2025/01/14 14:46:01 by edarnand         ###   ########.fr       */
+/*   Updated: 2025/02/07 12:06:00 by edarnand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,25 @@
 #include "push_swap.h"
 #include <unistd.h>
 
-static int	is_correct_in(char in[])
+static int	is_correct_in(char *in)
 {
-	if (in == NULL || ft_strlen(in) < 2 || ft_strlen(in) > 3)
+	int	len;
+
+	if (ft_strchr_index(in, '\n') >= 0)
+		in[ft_strchr_index(in, '\n')] = '\0';
+	len = ft_strlen(in);
+	if (len < 2 || len > 3)
 		return (0);
-	if (in[0] == 's' && (in[1] == 's' || in[1] == 'a' || in[1] == 'b'))
-		return (1);
-	if (in[0] == 'p' && (in[1] == 'a' || in[1] == 'b'))
-		return (1);
-	if (ft_strlen(in) == 2 && in[0] == 'r')
+	if (len == 2)
 	{
-		if (in[1] == 'r' || in[1] == 'a' || in[1] == 'b')
+		if (in[0] == 's' && (in[1] == 's' || in[1] == 'a' || in[1] == 'b'))
+			return (1);
+		else if (in[0] == 'p' && (in[1] == 'a' || in[1] == 'b'))
+			return (1);
+		else if (in[0] == 'r' && (in[1] == 'r' || in[1] == 'a' || in[1] == 'b'))
 			return (1);
 	}
-	else if (ft_strlen(in) == 3 && in[0] == 'r' && in[1] == 'r')
+	else if (len == 3 && in[0] == 'r' && in[1] == 'r')
 	{
 		if (in[2] == 'r' || in[2] == 'a' || in[2] == 'b')
 			return (1);
@@ -35,7 +40,7 @@ static int	is_correct_in(char in[])
 	return (0);
 }
 
-static void	do_in(char in[], t_stack *a, t_stack *b)
+static void	do_in(char *in, t_stack *a, t_stack *b)
 {
 	if (in[0] == 'p' && in[1] == 'a')
 		p_fake(b, a);
@@ -61,33 +66,21 @@ static void	do_in(char in[], t_stack *a, t_stack *b)
 	}
 }
 
-static void	read_in(char in[])
-{
-	int	byte;
-
-	byte = read(STDIN_FILENO, in, 4);
-	if (byte <= 0)
-		in[0] = '\0';
-	else if (byte <= 4)
-	{
-		in[byte] = '\0';
-		if (in[byte - 1] == '\n')
-			in[byte - 1] = '\0';
-	}
-}
-
 void	checker(t_stack a, t_stack b)
 {
-	char	in[5];
+	char	*in;
 	int		is_correct;
 
 	is_correct = 1;
 	while (is_correct == 1)
 	{
-		read_in(in);
+		in = get_next_line(STDIN_FILENO);
+		if (in == NULL)
+			error_exit();
 		is_correct = is_correct_in(in);
 		if (is_correct == 1)
 			do_in(in, &a, &b);
+		free(in);
 	}
 	if (b.len >= 1 || is_sorted_descending(a.arr, a.len) == 0)
 		ft_putstr_fd("KO\n", STDOUT_FILENO);
