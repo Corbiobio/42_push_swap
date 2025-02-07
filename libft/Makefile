@@ -50,7 +50,8 @@ C_FILE =	ft_strlen.c\
 			ft_lstmap.c\
 			ft_abs.c\
 			ft_strndup.c\
-			get_next_line.c
+			get_next_line.c\
+			free_double_pt.c
 
 OBJ = ${C_FILE:.c=.o}
 
@@ -60,7 +61,7 @@ OBJ = ${C_FILE:.c=.o}
 all: 
 	${MAKE} ${NAME}
 
-${NAME}: ${OBJ} libft.h
+${NAME}: ${OBJ} libft.h Makefile
 	ar -rc ${NAME} ${OBJ}
 
 clean:

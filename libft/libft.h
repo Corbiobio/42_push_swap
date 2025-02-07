@@ -6,7 +6,7 @@
 /*   By: edarnand <edarnand@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 13:59:55 by edarnand          #+#    #+#             */
-/*   Updated: 2025/01/13 19:49:07 by edarnand         ###   ########.fr       */
+/*   Updated: 2025/01/28 10:28:39 by edarnand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,5 +67,6 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 int		ft_abs(int n);
 char	*ft_strndup(char *s, int n);
 char	*get_next_line(int fd);
+char	*free_double_pt(char **arr);
 
 #endif

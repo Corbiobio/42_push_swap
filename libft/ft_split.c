@@ -6,7 +6,7 @@
 /*   By: edarnand <edarnand@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 09:33:22 by edarnand          #+#    #+#             */
-/*   Updated: 2025/01/06 10:54:20 by edarnand         ###   ########.fr       */
+/*   Updated: 2025/01/23 14:24:03 by edarnand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,6 +95,8 @@ char	**ft_split(char const *s, char c)
 	int		len;
 	char	**new;
 
+	if (s == NULL)
+		return (NULL);
 	len = get_total_words(s, c);
 	new = malloc(sizeof(char *) * (len + 1));
 	if (new == NULL)
