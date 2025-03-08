@@ -1,32 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: edarnand <edarnand@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/08 10:00:22 by edarnand          #+#    #+#             */
-/*   Updated: 2024/11/15 17:58:37 by edarnand         ###   ########.fr       */
+/*   Created: 2024/11/06 13:40:41 by edarnand          #+#    #+#             */
+/*   Updated: 2024/11/06 15:42:54 by edarnand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t nmemb, size_t size)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
 	size_t	i;
-	char	*element;
 
-	if (nmemb * size > 2147483647)
-		return (NULL);
 	i = 0;
-	element = malloc(nmemb * size);
-	if (element == NULL)
-		return (element);
-	while (i < size * nmemb)
+	while (i < n)
 	{
-		element[i] = 0;
+		if (((unsigned char *)s)[i] == (unsigned char)c)
+			return (((unsigned char *)s + i));
 		i++;
 	}
-	return (element);
+	return (NULL);
 }
