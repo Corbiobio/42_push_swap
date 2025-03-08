@@ -6,7 +6,7 @@
 /*   By: edarnand <edarnand@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/09 17:46:51 by edarnand          #+#    #+#             */
-/*   Updated: 2025/01/09 17:50:05 by edarnand         ###   ########.fr       */
+/*   Updated: 2025/03/08 17:56:33 by edarnand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,13 @@
 
 void	sort_stack_3(t_stack *st, t_op **op)
 {
-	if (is_sorted_descending(st->arr, st->len) == 1)
+	if (is_sorted_descending(st->arr, st->len) == 1 || st->len <= 1)
 		return ;
+	if (st->len == 2)
+	{
+		r(*st, op);
+		return ;
+	}
 	if (st->arr[2] > st->arr[0] && st->arr[2] > st->arr[1])
 		r(*st, op);
 	else if (st->arr[1] > st->arr[0] && st->arr[1] > st->arr[2])
@@ -39,14 +44,12 @@ void	sort_stack_6(t_stack *a, t_stack *b, t_op **op)
 			else
 				r(*a, op);
 		}
-		if (b->len == 3)
-			sort_stack_3(b, op);
+		sort_stack_3(b, op);
 	}
 	sort_stack_3(a, op);
 	while (b->len > 0)
 	{
-		if (b->len == 3 || (b->len == 2 && b->arr[0] > b->arr[1]))
-			rr(*b, op);
+		rr(*b, op);
 		p(b, a, op);
 	}
 }
