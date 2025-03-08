@@ -6,7 +6,7 @@
 /*   By: edarnand <edarnand@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/06 11:51:45 by edarnand          #+#    #+#             */
-/*   Updated: 2025/02/27 15:26:34 by edarnand         ###   ########.fr       */
+/*   Updated: 2025/03/08 15:36:28 by edarnand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,7 +107,7 @@ int	*arg_to_indexed_arr(int *argc, char **argv)
 	int	to_free;
 
 	to_free = 0;
-	argv = parse_arg(argc, argv, &to_free);
+	argv = parse_arg(*argc, argv, &to_free);
 	arr = arg_to_arr(*argc, argv, to_free);
 	if (to_free == 1)
 		free_argv(argv);

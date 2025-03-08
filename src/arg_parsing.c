@@ -6,7 +6,7 @@
 /*   By: edarnand <edarnand@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/02 19:08:06 by edarnand          #+#    #+#             */
-/*   Updated: 2025/01/06 12:27:13 by edarnand         ###   ########.fr       */
+/*   Updated: 2025/03/08 15:36:13 by edarnand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,22 +34,22 @@ static int	is_valid_str(char *str)
 	return (1);
 }
 
-char	**parse_arg(int *argc, char **argv, int *to_free)
+char	**parse_arg(int argc, char **argv, int *to_free)
 {
 	int	i;
 
-	if (*(argc) == 1)
+	if (argc == 1)
 	{
 		argv = ft_split(argv[0], ' ');
 		if (argv == NULL)
 			error_exit();
 		*to_free = 1;
-		*(argc) = 0;
-		while (argv[*(argc)] != 0)
-			*(argc) += 1;
+		argc = 0;
+		while (argv[argc] != 0)
+			argc += 1;
 	}
 	i = 0;
-	while (i < *(argc))
+	while (i < argc)
 	{
 		if (is_valid_str(argv[i]) == 0)
 		{

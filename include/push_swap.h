@@ -6,7 +6,7 @@
 /*   By: edarnand <edarnand@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 15:48:41 by edarnand          #+#    #+#             */
-/*   Updated: 2025/01/14 13:50:50 by edarnand         ###   ########.fr       */
+/*   Updated: 2025/03/08 15:35:46 by edarnand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ void	sort_stack_6(t_stack *a, t_stack *b, t_op **op);
 void	sort_stack_3(t_stack *a, t_op **op);
 
 //arg_parsing
-char	**parse_arg(int *argc, char **argv, int *to_free);
+char	**parse_arg(int argc, char **argv, int *to_free);
 
 //arg_to_indexed_arr
 int		*arg_to_indexed_arr(int *argc, char **argv);
