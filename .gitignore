@@ -4,10 +4,8 @@ checker
 test.js
 *.o
 .vscode
-a.out
 push_swap
-libft.a
-push_swap_visualizer/
 .psvconf.json
 error.log
 psv
+.NotRelink

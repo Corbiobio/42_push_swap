@@ -6,7 +6,7 @@
 /*   By: edarnand <edarnand@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/06 11:51:45 by edarnand          #+#    #+#             */
-/*   Updated: 2025/01/14 13:24:24 by edarnand         ###   ########.fr       */
+/*   Updated: 2025/02/27 15:26:34 by edarnand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,10 @@ int	atoi_protected(char *str, char **argv, int to_free, int *arr)
 	if (str != NULL && str[0] == '-')
 		is_negative = 1;
 	result = ft_atoi(str);
+	
 	if ((is_negative == 1 && result < 0) || (is_negative == 0 && result >= 0))
 		return (result);
-	if (to_free == 1)
+	if (to_free == 1)//FIX free after a return ????
 		free_argv(argv);
 	free(arr);
 	error_exit();
