@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   arg_to_indexed_arr.c                               :+:      :+:    :+:   */
+/*   arg_to_normalised_arr.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: edarnand <edarnand@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -100,7 +100,7 @@ static int	*replace_all_by_index_sorted(int *arr, int *arr_index, int len)
 	return (arr_index);
 }
 
-int	*arg_to_indexed_arr(int *argc, char **argv)
+int	*arg_to_normalised_arr(int *argc, char **argv)
 {
 	int	*arr;
 	int	*arr_index;

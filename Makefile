@@ -19,7 +19,7 @@ C_FILE =	push_swap.c\
 			fastest_to_sort.c\
 			sort.c\
 			arg_parsing.c\
-			arg_to_indexed_arr.c\
+			arg_to_normalised_arr.c\
 			sort_small_stack.c
 
 SRC_FILE := $(addprefix $(SRC_DIR), $(C_FILE))
@@ -29,7 +29,7 @@ OBJ := $(addprefix $(OBJ_DIR), $(OBJ))
 
 C_FILE_BONUS =	utils.c\
 					arg_parsing.c\
-					arg_to_indexed_arr.c\
+					arg_to_normalised_arr.c\
 					instruction.c\
 					operation.c\
 					stack.c\

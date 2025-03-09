@@ -6,7 +6,7 @@
 /*   By: edarnand <edarnand@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 11:40:02 by edarnand          #+#    #+#             */
-/*   Updated: 2025/01/15 10:55:33 by edarnand         ###   ########.fr       */
+/*   Updated: 2025/03/09 12:27:47 by edarnand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ int	main(int argc, char **argv)
 	{
 		argc -= 1;
 		argv += 1;
-		arr = arg_to_indexed_arr(&argc, argv);
+		arr = arg_to_normalised_arr(&argc, argv);
 		push_swap(argc, arr);
 	}
 	return (0);
