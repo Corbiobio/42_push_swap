@@ -14,13 +14,13 @@ C_FILE =	push_swap.c\
 			operation.c\
 			instruction.c\
 			stack.c\
-			sort_quarter.c\
-			fastest_to_top.c\
-			fastest_to_sort.c\
-			sort.c\
 			verif_and_split_arg.c\
 			arg_to_normalised_arr.c\
-			sort_small_stack.c
+			sorting/sort_quarter.c\
+			sorting/get_fastest_to_top.c\
+			sorting/get_fastest_to_sort.c\
+			sorting/sort.c\
+			sorting/sort_small_stack.c
 
 SRC_FILE := $(addprefix $(SRC_DIR), $(C_FILE))
 

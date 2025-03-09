@@ -6,7 +6,7 @@
 /*   By: edarnand <edarnand@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 15:48:41 by edarnand          #+#    #+#             */
-/*   Updated: 2025/03/09 12:34:23 by edarnand         ###   ########.fr       */
+/*   Updated: 2025/03/09 12:45:51 by edarnand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,11 +49,11 @@ void	p(t_stack *from, t_stack *to, t_op **op);
 t_stack	init_stack(char id, int len, int *arr);
 void	print_stack(t_stack st);
 
-//fastest_to_op
-int		fastest_to_top(t_stack st, int target);
+//get_fastest_to_top
+int		get_fastest_to_top(t_stack st, int target);
 
-//fastest_to_sort
-int		fastest_to_sort(t_stack st, int target);
+//get_fastest_to_sort
+int		get_fastest_to_sort(t_stack st, int target);
 
 //sort_quarter
 void	sort_quarter(t_stack *a, t_stack *b, t_op **op);

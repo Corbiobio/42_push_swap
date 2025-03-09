@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fastest_to_top.c                                   :+:      :+:    :+:   */
+/*   get_fastest_to_top.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: edarnand <edarnand@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -40,7 +40,7 @@ static int	fastest_way_from_bot(t_stack st, int target)
 	return (-1);
 }
 
-int	fastest_to_top(t_stack st, int target)
+int	get_fastest_to_top(t_stack st, int target)
 {
 	int	top;
 	int	bot;
