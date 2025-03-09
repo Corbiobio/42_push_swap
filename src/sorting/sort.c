@@ -6,7 +6,7 @@
 /*   By: edarnand <edarnand@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/20 17:22:31 by edarnand          #+#    #+#             */
-/*   Updated: 2025/03/09 12:47:16 by edarnand         ###   ########.fr       */
+/*   Updated: 2025/03/09 15:34:32 by edarnand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,8 @@ static int	get_best_to_sort(t_stack *a, t_stack *b)
 	return (lowest_num);
 }
 
-static void	optimized_move_from_b_to_a(t_stack *a, t_stack *b, t_op **op, int num)
+static void	optimized_move_from_b_to_a(t_stack *a, t_stack *b,
+	t_op **op, int num)
 {
 	int	move_top;
 	int	move_sort;
@@ -85,7 +86,8 @@ void	sort(t_stack *a, t_stack *b, t_op **op, t_op *op_start)
 		i++;
 	}
 	move_to_top = get_fastest_to_top(*a, a->min);
-	move_n_in_dir(*a, ft_abs(move_to_top), move_to_top, op);
+	move_n_in_dir(*a, ft_abs(move_to_top),
+		move_to_top, op);
 	if ((*op)->val == NULL)
 	{
 		free_all(a, b, op_start);

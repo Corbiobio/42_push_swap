@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   arg_to_normalised_arr.c                               :+:      :+:    :+:   */
+/*   arg_to_normalised_arr.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: edarnand <edarnand@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/06 11:51:45 by edarnand          #+#    #+#             */
-/*   Updated: 2025/03/08 15:36:28 by edarnand         ###   ########.fr       */
+/*   Updated: 2025/03/09 15:36:20 by edarnand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ int	atoi_protected(char *str, char **argv, int to_free, int *arr)
 	if (str != NULL && str[0] == '-')
 		is_negative = 1;
 	result = ft_atoi(str);
-	
 	if ((is_negative == 1 && result < 0) || (is_negative == 0 && result >= 0))
 		return (result);
 	if (to_free == 1)//FIX free after a return ????
