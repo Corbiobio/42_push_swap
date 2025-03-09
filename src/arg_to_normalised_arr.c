@@ -107,7 +107,7 @@ int	*arg_to_normalised_arr(int *argc, char **argv)
 	int	to_free;
 
 	to_free = 0;
-	argv = parse_arg(*argc, argv, &to_free);
+	argv = verif_and_split_arg(*argc, argv, &to_free);
 	arr = arg_to_arr(*argc, argv, to_free);
 	if (to_free == 1)
 		free_argv(argv);

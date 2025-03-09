@@ -18,7 +18,7 @@ C_FILE =	push_swap.c\
 			fastest_to_top.c\
 			fastest_to_sort.c\
 			sort.c\
-			arg_parsing.c\
+			verif_and_split_arg.c\
 			arg_to_normalised_arr.c\
 			sort_small_stack.c
 
@@ -28,13 +28,13 @@ OBJ = $(C_FILE:.c=.o)
 OBJ := $(addprefix $(OBJ_DIR), $(OBJ))
 
 C_FILE_BONUS =	utils.c\
-					arg_parsing.c\
+					verif_and_split_arg.c\
 					arg_to_normalised_arr.c\
 					instruction.c\
 					operation.c\
 					stack.c\
-					checker_bonus.c\
-					instruction_fake_bonus.c
+					bonus/checker_bonus.c\
+					bonus/instruction_fake_bonus.c
 
 OBJ_BONUS = $(C_FILE_BONUS:.c=.o)
 OBJ_BONUS := $(addprefix $(OBJ_DIR), $(OBJ_BONUS))

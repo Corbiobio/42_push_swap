@@ -6,7 +6,7 @@
 /*   By: edarnand <edarnand@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/02 19:08:06 by edarnand          #+#    #+#             */
-/*   Updated: 2025/03/08 15:36:13 by edarnand         ###   ########.fr       */
+/*   Updated: 2025/03/09 12:33:11 by edarnand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ static int	is_valid_str(char *str)
 	return (1);
 }
 
-char	**parse_arg(int argc, char **argv, int *to_free)
+char	**verif_and_split_arg(int argc, char **argv, int *to_free)
 {
 	int	i;
 
