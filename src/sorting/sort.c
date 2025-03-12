@@ -6,7 +6,7 @@
 /*   By: edarnand <edarnand@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/20 17:22:31 by edarnand          #+#    #+#             */
-/*   Updated: 2025/03/09 15:34:32 by edarnand         ###   ########.fr       */
+/*   Updated: 2025/03/12 11:35:56 by edarnand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,21 +73,21 @@ void	sort(t_stack *a, t_stack *b, t_op **op, t_op *op_start)
 	int	move_to_top;
 
 	if (a->len <= 6)
-	{
 		sort_stack_6(a, b, op);
-		return ;
-	}
-	sort_quarter(a, b, op);
-	i = 0;
-	while (b->len > 0 && i >= 0)
+	else
 	{
-		best = get_best_to_sort(a, b);
-		optimized_move_from_b_to_a(a, b, op, best);
-		i++;
+		sort_quarter(a, b, op);
+		i = 0;
+		while (b->len > 0 && i >= 0)
+		{
+			best = get_best_to_sort(a, b);
+			optimized_move_from_b_to_a(a, b, op, best);
+			i++;
+		}
+		move_to_top = get_fastest_to_top(*a, a->min);
+		move_n_in_dir(*a, ft_abs(move_to_top),
+			move_to_top, op);
 	}
-	move_to_top = get_fastest_to_top(*a, a->min);
-	move_n_in_dir(*a, ft_abs(move_to_top),
-		move_to_top, op);
 	if ((*op)->val == NULL)
 	{
 		free_all(a, b, op_start);
