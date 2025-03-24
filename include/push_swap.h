@@ -6,7 +6,7 @@
 /*   By: edarnand <edarnand@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 15:48:41 by edarnand          #+#    #+#             */
-/*   Updated: 2025/03/09 12:45:51 by edarnand         ###   ########.fr       */
+/*   Updated: 2025/03/24 14:46:07 by edarnand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,8 +82,5 @@ void	r_fake(t_stack st);
 void	rr_fake(t_stack st);
 void	s_fake(t_stack st);
 void	p_fake(t_stack *from, t_stack *to);
-
-//checker_bonus
-void	checker(t_stack a, t_stack b);
 
 #endif
