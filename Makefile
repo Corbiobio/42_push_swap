@@ -15,8 +15,8 @@ C_FILE =\
 	operation.c\
 	instruction.c\
 	stack.c\
-	parsing/arg_to_int_array.c\
-	parsing/array_to_indexed_array.c\
+	verif_and_split_arg.c\
+	arg_to_normalised_arr.c\
 	sorting/sort_quarter.c\
 	sorting/get_fastest_to_top.c\
 	sorting/get_fastest_to_sort.c\
@@ -30,8 +30,8 @@ OBJ := $(addprefix $(OBJ_DIR), $(OBJ))
 
 C_FILE_BONUS =\
 	utils.c\
-	parsing/arg_to_int_array.c\
-	parsing/array_to_indexed_array.c\
+	verif_and_split_arg.c\
+	arg_to_normalised_arr.c\
 	instruction.c\
 	operation.c\
 	stack.c\
