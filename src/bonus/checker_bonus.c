@@ -6,7 +6,7 @@
 /*   By: edarnand <edarnand@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 10:18:07 by edarnand          #+#    #+#             */
-/*   Updated: 2025/03/09 12:22:05 by edarnand         ###   ########.fr       */
+/*   Updated: 2025/04/01 16:38:59 by edarnand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ void	checker(t_stack a, t_stack b)
 	{
 		in = get_next_line(STDIN_FILENO);
 		if (in == NULL)
-			error_exit();
+			break ;
 		is_correct = is_correct_in(in);
 		if (is_correct == 1)
 			do_in(in, &a, &b);
@@ -91,27 +91,22 @@ void	checker(t_stack a, t_stack b)
 
 int	main(int argc, char **argv)
 {
-	int		*arr;
+	int		*array;
 	t_stack	a;
 	t_stack	b;
 
-	if (argc == 1)
-		ft_putstr_fd(argv[0], 1);
-	else if (argc >= 2)
+	if (argc <= 1)
+		return (EXIT_FAILURE);
+	argc -= 1;
+	argv += 1;
+	array = arg_to_normalised_arr(&argc, argv);
+	a = init_stack('a', argc, array);
+	b = init_stack('b', argc, NULL);
+	if (a.arr == NULL || b.arr == NULL)
 	{
-		argc -= 1;
-		argv += 1;
-		arr = NULL;
-		arr = arg_to_normalised_arr(&argc, argv);
-		a = init_stack('a', argc, arr);
-		b = init_stack('b', argc, NULL);
-		if (a.arr != NULL && b.arr != NULL)
-			checker(a, b);
-		else
-		{
-			free_all(&a, &b, NULL);
-			error_exit();
-		}
+		free_all(&a, &b, NULL);
+		error_exit();
 	}
+	checker(a, b);
 	return (0);
 }
