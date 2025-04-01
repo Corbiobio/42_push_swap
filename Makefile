@@ -9,32 +9,34 @@ SRC_DIR = src/
 OBJ_DIR = obj/
 INCLUDE_DIR = include/
 
-C_FILE =	push_swap.c\
-			utils.c\
-			operation.c\
-			instruction.c\
-			stack.c\
-			verif_and_split_arg.c\
-			arg_to_normalised_arr.c\
-			sorting/sort_quarter.c\
-			sorting/get_fastest_to_top.c\
-			sorting/get_fastest_to_sort.c\
-			sorting/sort.c\
-			sorting/sort_small_stack.c
+C_FILE =\
+	push_swap.c\
+	utils.c\
+	operation.c\
+	instruction.c\
+	stack.c\
+	parsing/arg_to_int_array.c\
+	parsing/array_to_indexed_array.c\
+	sorting/sort_quarter.c\
+	sorting/get_fastest_to_top.c\
+	sorting/get_fastest_to_sort.c\
+	sorting/sort.c\
+	sorting/sort_small_stack.c
 
 SRC_FILE := $(addprefix $(SRC_DIR), $(C_FILE))
 
 OBJ = $(C_FILE:.c=.o)
 OBJ := $(addprefix $(OBJ_DIR), $(OBJ))
 
-C_FILE_BONUS =	utils.c\
-					verif_and_split_arg.c\
-					arg_to_normalised_arr.c\
-					instruction.c\
-					operation.c\
-					stack.c\
-					bonus/checker_bonus.c\
-					bonus/instruction_fake_bonus.c
+C_FILE_BONUS =\
+	utils.c\
+	parsing/arg_to_int_array.c\
+	parsing/array_to_indexed_array.c\
+	instruction.c\
+	operation.c\
+	stack.c\
+	bonus/checker_bonus.c\
+	bonus/instruction_fake_bonus.c
 
 OBJ_BONUS = $(C_FILE_BONUS:.c=.o)
 OBJ_BONUS := $(addprefix $(OBJ_DIR), $(OBJ_BONUS))

@@ -6,13 +6,12 @@
 /*   By: edarnand <edarnand@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 11:40:02 by edarnand          #+#    #+#             */
-/*   Updated: 2025/03/09 12:27:47 by edarnand         ###   ########.fr       */
+/*   Updated: 2025/03/26 18:11:56 by edarnand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include "push_swap.h"
-#include <unistd.h>
+#include <stdlib.h>
 
 void	push_swap(int len, int *arr)
 {
@@ -45,16 +44,14 @@ void	push_swap(int len, int *arr)
 
 int	main(int argc, char **argv)
 {
-	int	*arr;
+	int	*array;
 
-	if (argc == 1)
-		ft_putstr_fd(argv[0], STDOUT_FILENO);
-	else if (argc >= 2)
-	{
-		argc -= 1;
-		argv += 1;
-		arr = arg_to_normalised_arr(&argc, argv);
-		push_swap(argc, arr);
-	}
+	if (argc <= 1)
+		return (EXIT_FAILURE);
+	argc -= 1;
+	argv += 1;
+	array = arg_to_int_array(argc, argv);
+	array = array_to_indexed_array(array, argc);
+	push_swap(argc, array);
 	return (0);
 }
