@@ -57,7 +57,8 @@ C_FILE =	ft_strlen.c\
 			ft_abs.c\
 			ft_strndup.c\
 			get_next_line.c\
-			free_double_pt.c
+			free_double_pt.c\
+			ft_atoi_protected.c
 
 SRC_FILE := $(addprefix $(SRC_DIR), $(C_FILE))
 
@@ -73,7 +74,7 @@ $(NAME): .NotRelink
 	ar -rc $(NAME) $(OBJ)
 	touch .NotRelink
 
-$(OBJ_DIR)%.o: $(SRC_DIR)%.c $(INCLUDE_DIR)/libft.h Makefile
+$(OBJ_DIR)%.o: $(SRC_DIR)%.c $(INCLUDE_DIR)libft.h Makefile
 	@mkdir -p $(dir $@)
 	$(CC) $(CFLAGS) $(INC) -c $< -o $@
 

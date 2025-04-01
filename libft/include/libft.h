@@ -6,7 +6,7 @@
 /*   By: edarnand <edarnand@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 13:59:55 by edarnand          #+#    #+#             */
-/*   Updated: 2025/01/28 10:28:39 by edarnand         ###   ########.fr       */
+/*   Updated: 2025/03/26 13:10:31 by edarnand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,5 +68,6 @@ int		ft_abs(int n);
 char	*ft_strndup(char *s, int n);
 char	*get_next_line(int fd);
 char	*free_double_pt(char **arr);
+int		ft_atoi_protected(const char *str, int *int_pt);
 
 #endif
