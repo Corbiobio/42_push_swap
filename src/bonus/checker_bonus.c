@@ -6,7 +6,7 @@
 /*   By: edarnand <edarnand@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 10:18:07 by edarnand          #+#    #+#             */
-/*   Updated: 2025/04/01 16:38:59 by edarnand         ###   ########.fr       */
+/*   Updated: 2025/04/02 13:48:22 by edarnand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,7 +99,9 @@ int	main(int argc, char **argv)
 		return (EXIT_FAILURE);
 	argc -= 1;
 	argv += 1;
-	array = arg_to_normalised_arr(&argc, argv);
+	array = arg_to_int_array(argc, argv);
+	if (array == NULL)
+		return (EXIT_FAILURE);
 	a = init_stack('a', argc, array);
 	b = init_stack('b', argc, NULL);
 	if (a.arr == NULL || b.arr == NULL)

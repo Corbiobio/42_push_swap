@@ -6,7 +6,7 @@
 /*   By: edarnand <edarnand@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 11:40:02 by edarnand          #+#    #+#             */
-/*   Updated: 2025/03/09 12:27:47 by edarnand         ###   ########.fr       */
+/*   Updated: 2025/04/01 18:23:23 by edarnand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ void	push_swap(int len, int *arr)
 
 int	main(int argc, char **argv)
 {
-	int	*arr;
+	int	*array;
 
 	if (argc == 1)
 		ft_putstr_fd(argv[0], STDOUT_FILENO);
@@ -53,8 +53,9 @@ int	main(int argc, char **argv)
 	{
 		argc -= 1;
 		argv += 1;
-		arr = arg_to_normalised_arr(&argc, argv);
-		push_swap(argc, arr);
+		array = arg_to_int_array(argc, argv);
+		array = array_to_indexed_array(array, argc);
+		push_swap(argc, array);
 	}
 	return (0);
 }
