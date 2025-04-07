@@ -6,7 +6,7 @@
 /*   By: edarnand <edarnand@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/13 15:24:00 by edarnand          #+#    #+#             */
-/*   Updated: 2025/03/24 14:41:41 by edarnand         ###   ########.fr       */
+/*   Updated: 2025/04/07 11:23:28 by edarnand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,20 +18,6 @@ void	error_exit(void)
 {
 	ft_putstr_fd("Error\n", STDERR_FILENO);
 	exit(EXIT_FAILURE);
-}
-
-void	free_argv(char **argv)
-{
-	int	i;
-
-	i = 0;
-	while (argv[i] != 0)
-	{
-		free(argv[i]);
-		i++;
-	}
-	free(argv[i]);
-	free(argv);
 }
 
 void	free_all(t_stack *a, t_stack *b, t_op *op)

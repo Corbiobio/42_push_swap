@@ -6,7 +6,7 @@
 /*   By: edarnand <edarnand@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 15:48:41 by edarnand          #+#    #+#             */
-/*   Updated: 2025/04/02 13:47:10 by edarnand         ###   ########.fr       */
+/*   Updated: 2025/04/07 11:48:29 by edarnand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,6 @@ typedef struct s_op
 	int			count;
 	struct s_op	*next;
 }	t_op;
-
-//push_swap
-void	push_swap(int len, int *arr);
 
 //operation
 void	push_op(t_op **op, char *val, char id);
@@ -71,7 +68,6 @@ int		*arg_to_int_array(int argc, char **argv);
 
 //utils
 void	error_exit(void);
-void	free_argv(char **argv);
 void	free_all(t_stack *a, t_stack *b, t_op *op);
 int		is_sorted_descending(int *arr, int len);
 
